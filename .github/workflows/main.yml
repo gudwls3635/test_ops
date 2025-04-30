@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker Image          # 컨테이너 이미지 빌드 단계
-      run: docker build -t test_server:latest --file ./server/Dockerfile --target prod --build-arg PLATFORM=linux/amd64 --platform linux/amd64 ./server
+      run: docker build -t test_server_action:latest --file ./server/Dockerfile --target prod --build-arg PLATFORM=linux/amd64 --platform linux/amd64 ./server
 
     - name: Push Docker Image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/test_server:latest
+      run: docker push test_server_action:latest
