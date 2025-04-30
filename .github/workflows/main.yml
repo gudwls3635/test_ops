@@ -1,0 +1,20 @@
+name: Build [meet-text-server] and push image
+ 
+on:
+  push:
+    branches: # branch에 push 되면 이 actions가 작동할지 설정
+    - main
+  
+jobs:
+  build:
+    runs-on: [self-hosted, Linux, x64]
+ 
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3          # 소스코드 checkout 단계
+ 
+    - name: Build Docker Image          # 컨테이너 이미지 빌드 단계
+      run: docker build -t test_server:latest --file ./server/Dockerfile --target prod --build-arg PLATFORM=linux/amd64 --platform linux/amd64 ./server
+
+    # - name: Clean up Docker
+    #   run: docker system prune -af
