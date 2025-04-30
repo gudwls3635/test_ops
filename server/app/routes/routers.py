@@ -6,10 +6,10 @@ router = APIRouter()
 
 @router.post("/summary")
 async def summary(request: Request):
-    print("post /text/summary")
+    print("post /test/summary")
     return 200
 
 @router.post("/keyword")
 async def keyword(request: Request):
-    print("post /text/keyword")
+    print("post /test/keyword")
     return 200
