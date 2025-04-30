@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "gudwls3635/test_ops",
+  "pipelineDirectory": "test_ops",
+  "workspaceDirectory": "test_ops/test_ops",
+  "repositories": {
+    "gudwls3635/test_ops": {
+      "repositoryPath": "test_ops/test_ops",
+      "lastRunOn": "04/30/2025 10:38:05 +09:00"
+    }
+  },
+  "lastRunOn": "04/30/2025 10:38:06 +09:00"
+}
