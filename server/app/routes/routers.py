@@ -13,3 +13,8 @@ async def summary(request: Request):
 async def keyword(request: Request):
     print("post /test/keyword")
     return 200
+
+@router.post("/aa")
+async def keyword(request: Request):
+    print("post /test/aaa")
+    return 200
